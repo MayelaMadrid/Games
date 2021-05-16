@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  width: 900px;
+  height: 500px;
+  background-image: url(./img/bosque.jpg);
+  background-size: 150vw 90vh;
+  animation: scaleBackground 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes scaleBackground {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+#canela {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 70px;
+  transition: all 0.5s ease-out;
+}
+img {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+}
+
+.animation-down {
+  transform: rotateZ(90deg);
+}
+.animation-up {
+  transform: rotateZ(0deg);
+}
+
+.animation-pato {
+  animation: pato 13s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pato {
+  to {
+    left: 0px;
+  }
+}
+
+.modal-lose {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  background: mintcream;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
